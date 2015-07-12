@@ -1,0 +1,47 @@
+//
+//  IM.pch
+//  IM
+//
+//  Created by Chan on 15/1/12.
+//  Copyright (c) 2015年 aicai. All rights reserved.
+//
+
+#ifndef IM_IM_pch
+#define IM_IM_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef DEBUG
+#define IMLog(...) NSLog(__VA_ARGS__)
+#else
+#define IMLog(...)
+#endif
+
+
+//#if TARGET_IPHONE_SIMULATOR
+//#define SIMULATOR 1
+//#elif TARGET_OS_IPHONE
+//#define SIMULATOR 0
+//#endif
+
+#import "AppDelegate.h"
+#define kScreenWidth   [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight  [UIScreen mainScreen].bounds.size.height
+#define kAppResource      @"iPhone"
+#define kAppDelegate   (AppDelegate *)([UIApplication sharedApplication].delegate)
+#import <UIKit/UIKit.h>
+#import "UIImage+Stretch.h"
+#import "NSString+Append.h"
+#import "UIButton+BackgroundImage.h"
+#import "NSString+Helper.h"
+#import "UserModel.h"
+#import "XMPPFramework.h"
+#import "NSString+Helper.h"
+#import "UIImageView+WebCache.h"
+#import "ReadWriteUtil.h"
+
+#import "ProgressHUD.h"
+#import "DocumentUtil.h"
+#define kFileServerIP  @"127.0.0.1"
+
+#endif
